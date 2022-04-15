@@ -60,6 +60,62 @@ body, html {
           align-items: center;
 }
 
+.restaurant-card {
+  width: 340px;
+  height: 258px;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 13px lightgrey;
+          box-shadow: 0px 5px 13px lightgrey;
+  margin-bottom: 20px;
+}
+
+.restaurant-card__image {
+  height: 80%;
+}
+
+.restaurant-card__image img {
+  width: 100%;
+  height: 90%;
+  border-radius: 15px 15px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurant-card__heading {
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurant-card__heading h2 {
+  margin: -7px 0px 5px 0px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.restaurant-card__heading .heart {
+  margin-right: 20px;
+}
+
+.restaurant-card__heading .heart i {
+  font-size: 25px;
+}
+
+.restaurant-card__byline {
+  padding-left: 15px;
+  margin-top: -7px;
+}
+
+.restaurant-card__byline p {
+  margin: 0;
+  font-size: 18px;
+}
+
 .header {
   height: 63px;
   display: -webkit-box;
@@ -163,7 +219,7 @@ body, html {
 }
 
 .functions {
-  margin-top: 30px;
+  margin: 30px 0px 40px 0px;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,7 +234,7 @@ body, html {
   font-family: 'Roboto';
   font-size: 25px;
   font-weight: 800;
-  margin-left: 20px;
+  margin: 15px 15px 25px 20px;
 }
 
 .functions__menu {
@@ -224,6 +280,38 @@ body, html {
   margin: 0px 25px;
   font-size: 20px;
   color: #7e7d7d;
+}
+
+.restaurant {
+  font-family: 'Roboto';
+  height: auto;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restaurant h1 {
+  font-size: 25px;
+  font-weight: 800;
+  margin: 50px 20px 25px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.restaurant .link {
+  text-decoration: none;
+  color: black;
 }
 
 /*@import "./page2";
