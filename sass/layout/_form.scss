@@ -10,6 +10,7 @@
     {
         margin-right: 15px;
         font-size: 17px;
+        color: lighten($color_black, 25%);
     }
     &__text
     {
@@ -24,6 +25,8 @@
     ::placeholder
     {
         color: black;
+        color: lighten($color_black, 30%);
+
     }   
     
 

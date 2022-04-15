@@ -10,3 +10,16 @@ $color_black: #000000;
 $color_grey: #7e7d7d;
 
 $padding_card: 15px;
+
+$breakpoints: (
+    mobile: 375px,
+    tablette: 750px,
+    desktop: 1200px,
+);
+
+$black_shades: (
+    medium: lighten($color_black, 50%),
+    dark: lighten($color_black,20%),
+    grey: lighten($color_black, 22%)
+
+)

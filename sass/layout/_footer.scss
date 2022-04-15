@@ -1,0 +1,44 @@
+.footer
+{
+    background-color: map-get($black_shades, grey);
+    height: 200px;
+    padding: 10px 25px;
+    &__heading
+    {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    }
+    &__menu
+    {
+        padding: 0;
+        li
+        {
+            list-style: none;
+            font-family: 'Roboto';
+            color: $color_white;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        &__proposal
+        {
+            font-size: 14px;
+            padding-right: 10px;
+            display: flex;
+            span
+            {
+                display: flex;
+            }
+        }
+        &__partner
+        {
+            display: flex;
+            i 
+            {
+                font-size: 12px;
+                padding-right: 7px;
+            }
+        }
+    }
+}

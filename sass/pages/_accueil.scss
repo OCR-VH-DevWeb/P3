@@ -12,14 +12,14 @@
         margin: 0;
         font-size: 24px;
         padding: 40px 45px 12px 45px;
-        text-shadow: 0 0 black;
+        font-weight: 800;
     }
     &__subtitle
     {
         font-size: 18px;
         margin: 1px 25px 0px 35px;
-        color: #7e7d7d;
-        font-weight: 400;
+        color: map-get($black_shades, medium);
+        font-weight: 300;
         text-shadow: 0px 0px 0px #7e7d7d;
     }
 }
@@ -35,7 +35,7 @@
         font-family: 'Roboto';
         font-size: 25px;
         font-weight: 800;
-        margin: 15px 15px 25px 20px;
+        margin: 15px 15px 28px 20px;
     }
     &__menu
     {
@@ -73,7 +73,7 @@
             {
                 margin: 0px 25px;
                 font-size: 20px;
-                color: $color_grey;
+                color: map-get($black_shades, medium);
             }
         }
     }
@@ -86,6 +86,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding-bottom: 45px;
     h1
     {
         font-size: 25px;
@@ -99,4 +100,8 @@
         text-decoration: none;
         color: black;
     }
+    /*.heart
+    {
+        color: map-get($black_shades, dark);
+    }*/
 }

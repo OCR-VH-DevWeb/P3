@@ -46,7 +46,7 @@ body, html {
   border-radius: 50%;
   font-size: 15px;
   font-weight: 400;
-  padding-top: 3px;
+  padding-top: 5px;
   width: 25px;
   height: 25px;
   display: -webkit-box;
@@ -170,6 +170,7 @@ body, html {
 .form__marker {
   margin-right: 15px;
   font-size: 17px;
+  color: #404040;
 }
 
 .form__text {
@@ -184,18 +185,72 @@ body, html {
 
 .form ::-webkit-input-placeholder {
   color: black;
+  color: #4d4d4d;
 }
 
 .form :-ms-input-placeholder {
   color: black;
+  color: #4d4d4d;
 }
 
 .form ::-ms-input-placeholder {
   color: black;
+  color: #4d4d4d;
 }
 
 .form ::placeholder {
   color: black;
+  color: #4d4d4d;
+}
+
+.footer {
+  background-color: #383838;
+  height: 200px;
+  padding: 10px 25px;
+}
+
+.footer__heading {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer__menu {
+  padding: 0;
+}
+
+.footer__menu li {
+  list-style: none;
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.footer__menu__proposal {
+  font-size: 14px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__menu__proposal span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__menu__partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__menu__partner i {
+  font-size: 12px;
+  padding-right: 7px;
 }
 
 .booking {
@@ -219,14 +274,14 @@ body, html {
   margin: 0;
   font-size: 24px;
   padding: 40px 45px 12px 45px;
-  text-shadow: 0 0 black;
+  font-weight: 800;
 }
 
 .booking__subtitle {
   font-size: 18px;
   margin: 1px 25px 0px 35px;
-  color: #7e7d7d;
-  font-weight: 400;
+  color: gray;
+  font-weight: 300;
   text-shadow: 0px 0px 0px #7e7d7d;
 }
 
@@ -246,7 +301,7 @@ body, html {
   font-family: 'Roboto';
   font-size: 25px;
   font-weight: 800;
-  margin: 15px 15px 25px 20px;
+  margin: 15px 15px 28px 20px;
 }
 
 .functions__menu {
@@ -291,7 +346,7 @@ body, html {
 .functions__menu li i {
   margin: 0px 25px;
   font-size: 20px;
-  color: #7e7d7d;
+  color: gray;
 }
 
 .restaurant {
@@ -308,6 +363,11 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 45px;
+  /*.heart
+    {
+        color: map-get($black_shades, dark);
+    }*/
 }
 
 .restaurant h1 {
