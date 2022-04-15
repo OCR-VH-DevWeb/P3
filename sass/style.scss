@@ -12,6 +12,7 @@
 
 // Components
 @import "./components/button";
+@import "./components/number";
 
 // Layout
 @import "./layout/header";
@@ -20,7 +21,7 @@
 @import "./layout/form";
 
 // Pages
-/*@import "./page1";
+@import "./pages/accueil";
 /*@import "./page2";
 
 // Themes*/

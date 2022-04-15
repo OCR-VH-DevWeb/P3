@@ -1,0 +1,81 @@
+.booking
+{
+    background-color: $background_secondary;
+    height: 288px;
+    font-family: 'Roboto';
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title
+    {
+        margin: 0;
+        font-size: 24px;
+        padding: 40px 45px 12px 45px;
+        text-shadow: 0 0 black;
+    }
+    &__subtitle
+    {
+        font-size: 18px;
+        margin: 1px 25px 0px 35px;
+        color: #7e7d7d;
+        font-weight: 400;
+        text-shadow: 0px 0px 0px #7e7d7d;
+    }
+}
+
+.functions
+{
+    margin-top: 30px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    &__title
+    {
+        font-family: 'Roboto';
+        font-size: 25px;
+        font-weight: 800;
+        margin-left: 20px;
+    }
+    &__menu
+    {
+        list-style: none; 
+        counter-reset: li;
+        font-family: 'Roboto';
+        padding: 1px;
+        margin: 0px 15px 0px 30px;
+        li
+        {
+            background-color: $background_secondary;
+            width: 325px;
+            height: 75px;
+            border-radius: 18px;
+            box-shadow: 0px 5px 13px lightgrey;
+            color: $color_black;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            &:hover 
+            {
+                background-color: lighten($color_primary, 35%);
+                & > i
+                {
+                    color: $color_primary;
+                }
+            }
+            .number 
+            {
+                margin-left: -13px;
+            }          
+            i
+            {
+                margin: 0px 25px;
+                font-size: 20px;
+                color: $color_grey;
+            }
+        }
+    }
+}
+

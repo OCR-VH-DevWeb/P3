@@ -19,82 +19,6 @@ html, body {
   font-family: 'Roboto', sans-serif, 'Shrikhand', cursive;
 }
 
-.booking {
-  background-color: #f6f6f6;
-  height: 288px;
-  font-family: 'Roboto';
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.booking__title {
-  margin: 0;
-  font-size: 24px;
-  padding: 40px 45px 12px 45px;
-  text-shadow: 0 0 black;
-}
-
-.booking__subtitle {
-  font-size: 18px;
-  margin: 1px 25px 0px 35px;
-  color: #7e7d7d;
-  font-weight: 400;
-  text-shadow: 0px 0px 0px #7e7d7d;
-}
-
-.functions {
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.functions__title {
-  font-family: 'Roboto';
-  font-size: 25px;
-  font-weight: 800;
-  margin-left: 20px;
-}
-
-.functions__menu {
-  list-style: none;
-  counter-reset: li;
-  font-family: 'Roboto';
-  padding: 1px;
-  margin: 0px 15px 0px 30px;
-}
-
-.functions__menu__menu > li {
-  background-color: #f6f6f6;
-  width: 325px;
-  height: 75px;
-  border-radius: 18px;
-  -webkit-box-shadow: 0px 5px 13px lightgrey;
-          box-shadow: 0px 5px 13px lightgrey;
-  color: #000000;
-  font-weight: 700;
-  margin-bottom: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 body, html {
   font-family: 'Roboto', sans-serif;
   font-family: "Shrikhand", cursive;
@@ -114,6 +38,26 @@ body, html {
   -webkit-box-shadow: 1px 5px 5px lightgrey;
           box-shadow: 1px 5px 5px lightgrey;
   margin: 32px;
+}
+
+.number {
+  color: #ffffff;
+  background-color: #9356DC;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 400;
+  padding-top: 3px;
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header {
@@ -186,7 +130,102 @@ body, html {
   color: black;
 }
 
-/*@import "./page1";
+.booking {
+  background-color: #f6f6f6;
+  height: 288px;
+  font-family: 'Roboto';
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking__title {
+  margin: 0;
+  font-size: 24px;
+  padding: 40px 45px 12px 45px;
+  text-shadow: 0 0 black;
+}
+
+.booking__subtitle {
+  font-size: 18px;
+  margin: 1px 25px 0px 35px;
+  color: #7e7d7d;
+  font-weight: 400;
+  text-shadow: 0px 0px 0px #7e7d7d;
+}
+
+.functions {
+  margin-top: 30px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.functions__title {
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: 800;
+  margin-left: 20px;
+}
+
+.functions__menu {
+  list-style: none;
+  counter-reset: li;
+  font-family: 'Roboto';
+  padding: 1px;
+  margin: 0px 15px 0px 30px;
+}
+
+.functions__menu li {
+  background-color: #f6f6f6;
+  width: 325px;
+  height: 75px;
+  border-radius: 18px;
+  -webkit-box-shadow: 0px 5px 13px lightgrey;
+          box-shadow: 0px 5px 13px lightgrey;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.functions__menu li:hover {
+  background-color: #f2eafb;
+}
+
+.functions__menu li:hover > i {
+  color: #9356DC;
+}
+
+.functions__menu li .number {
+  margin-left: -13px;
+}
+
+.functions__menu li i {
+  margin: 0px 25px;
+  font-size: 20px;
+  color: #7e7d7d;
+}
+
 /*@import "./page2";
 
 // Themes*/
