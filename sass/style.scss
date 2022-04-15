@@ -1,6 +1,6 @@
-/*// Utils
+// Utils
 @import "./utils/variables";
-@import "./utils/functions";
+/*@import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
 
@@ -10,17 +10,17 @@
 @import "./base/base";
 @import "./base/typography";
 
-/*// Components
-@import "./components/buttons";*/
+// Components
+@import "./components/button";
 
 // Layout
 @import "./layout/header";
 /*@import "./layout/nav";
-@import "./layout/container";
+@import "./layout/container";*/
 @import "./layout/form";
 
 // Pages
-@import "./page1";
-@import "./page2";
+/*@import "./page1";
+/*@import "./page2";
 
 // Themes*/
