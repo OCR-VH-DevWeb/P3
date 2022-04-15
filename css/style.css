@@ -61,8 +61,8 @@ body, html {
 }
 
 .restaurant-card {
-  width: 340px;
-  height: 258px;
+  width: 335px;
+  height: 250px;
   background-color: white;
   border-radius: 15px;
   -webkit-box-shadow: 0px 5px 13px lightgrey;
@@ -71,12 +71,12 @@ body, html {
 }
 
 .restaurant-card__image {
-  height: 80%;
+  height: 78%;
 }
 
 .restaurant-card__image img {
   width: 100%;
-  height: 90%;
+  height: 88%;
   border-radius: 15px 15px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -114,6 +114,18 @@ body, html {
 .restaurant-card__byline p {
   margin: 0;
   font-size: 18px;
+}
+
+.new {
+  border: none;
+  background-color: #99E2D0;
+  color: #278870;
+  font-size: 14px;
+  font-weight: bold;
+  width: 90px;
+  height: 30px;
+  padding: 9px;
+  border-radius: 2px;
 }
 
 .header {
