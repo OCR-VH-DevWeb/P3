@@ -100,8 +100,8 @@
         text-decoration: none;
         color: black;
     }
-    /*.heart
+    .heart
     {
-        color: map-get($black_shades, dark);
-    }*/
+        color: map-get($black_shades, medium);
+    }
 }

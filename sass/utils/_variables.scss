@@ -19,7 +19,6 @@ $breakpoints: (
 
 $black_shades: (
     medium: lighten($color_black, 50%),
-    dark: lighten($color_black,20%),
-    grey: lighten($color_black, 22%)
-
-)
+    dark: lighten($color_black, 80%),
+    light: lighten($color_black, 22%),
+);

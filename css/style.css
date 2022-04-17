@@ -62,27 +62,37 @@ body, html {
 
 .restaurant-card {
   width: 335px;
-  height: 250px;
+  height: 252px;
   background-color: white;
   border-radius: 15px;
   -webkit-box-shadow: 0px 5px 13px lightgrey;
           box-shadow: 0px 5px 13px lightgrey;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .restaurant-card__image {
-  height: 78%;
+  height: 70%;
+  overflow: hidden;
 }
 
 .restaurant-card__image img {
   width: 100%;
-  height: 88%;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 15px;
+  /*border-radius: 15px 15px 0px 0px;*/
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
 }
 
 .restaurant-card__heading {
+  height: 40px;
   padding-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,32 +100,32 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .restaurant-card__heading h2 {
-  margin: -7px 0px 5px 0px;
   font-size: 18px;
   font-weight: 800;
+  margin-bottom: 5px;
 }
 
 .restaurant-card__heading .heart {
-  margin-right: 20px;
-}
-
-.restaurant-card__heading .heart i {
+  margin: 25px 30px 0px 0px;
   font-size: 25px;
 }
 
 .restaurant-card__byline {
   padding-left: 15px;
-  margin-top: -7px;
-}
-
-.restaurant-card__byline p {
   margin: 0;
-  font-size: 18px;
+  font-size: 17px;
 }
 
+/*.heart 
+{
+    color: map-get($black_shades, medium);
+}*/
 .new {
   border: none;
   background-color: #99E2D0;
@@ -204,7 +214,6 @@ body, html {
 }
 
 .footer {
-  background-color: #383838;
   height: 200px;
   padding: 10px 25px;
 }
@@ -364,10 +373,6 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 45px;
-  /*.heart
-    {
-        color: map-get($black_shades, dark);
-    }*/
 }
 
 .restaurant h1 {
@@ -384,6 +389,10 @@ body, html {
 .restaurant .link {
   text-decoration: none;
   color: black;
+}
+
+.restaurant .heart {
+  color: gray;
 }
 
 /*@import "./page2";
