@@ -1,5 +1,4 @@
-/*@import "./utils/functions";
-@import "./utils/mixins";
+/*@import "./utils/mixins";
 @import "./utils/extensions";
 
 // Vendors*/
@@ -20,8 +19,7 @@ html, body {
 }
 
 body, html {
-  font-family: 'Roboto', sans-serif;
-  font-family: "Shrikhand", cursive;
+  font-family: 'Roboto', "Shrikhand", sans-serif, cursive;
 }
 
 .button {
@@ -38,6 +36,7 @@ body, html {
   -webkit-box-shadow: 1px 5px 5px lightgrey;
           box-shadow: 1px 5px 5px lightgrey;
   margin: 32px;
+  cursor: pointer;
 }
 
 .number {
@@ -65,8 +64,8 @@ body, html {
   height: 252px;
   background-color: white;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 5px 13px lightgrey;
-          box-shadow: 0px 5px 13px lightgrey;
+  -webkit-box-shadow: 0 5px 13px lightgrey;
+          box-shadow: 0 5px 13px lightgrey;
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,17 +74,24 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /*.restaurant-card__image
+    {
+        /*right: 30px;
+        margin-top: 13px;
+    }  */
 }
 
 .restaurant-card__image {
   height: 70%;
-  overflow: hidden;
+  /*.new
+        {
+        }*/
 }
 
 .restaurant-card__image img {
   width: 100%;
-  border-radius: 15px;
-  /*border-radius: 15px 15px 0px 0px;*/
+  height: 88%;
+  border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
@@ -103,6 +109,11 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*.heart
+        {
+            margin: 25px 30px 0 0;
+            font-size: 25px; 
+        }*/
 }
 
 .restaurant-card__heading h2 {
@@ -111,21 +122,36 @@ body, html {
   margin-bottom: 5px;
 }
 
-.restaurant-card__heading .heart {
-  margin: 25px 30px 0px 0px;
-  font-size: 25px;
-}
-
 .restaurant-card__byline {
   padding-left: 15px;
   margin: 0;
   font-size: 17px;
+  color: #333333;
 }
 
-/*.heart 
+.like {
+  width: 30px;
+  height: 25px;
+  border: none;
+  /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+  cursor: pointer;
+}
+
+.like .heart {
+  color: #333333;
+  font-size: 25px;
+}
+
+/*.heart:hover
 {
-    color: map-get($black_shades, medium);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background: transparent;
+    
 }*/
+/*:active*/
 .new {
   border: none;
   background-color: #99E2D0;
@@ -134,8 +160,21 @@ body, html {
   font-weight: bold;
   width: 90px;
   height: 30px;
-  padding: 9px;
+  padding: 8px;
   border-radius: 2px;
+}
+
+.header__homepage {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.header__homepage .arrow {
+  font-size: 20px;
+  color: #333333;
 }
 
 .header {
@@ -164,8 +203,8 @@ body, html {
 .form {
   height: 50px;
   background-color: #eaeaea;
-  -webkit-box-shadow: inset 0px 3px 4px lightgrey;
-          box-shadow: inset 0px 3px 4px lightgrey;
+  -webkit-box-shadow: inset 0 3px 4px lightgrey;
+          box-shadow: inset 0 3px 4px lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,26 +233,23 @@ body, html {
 }
 
 .form ::-webkit-input-placeholder {
-  color: black;
   color: #4d4d4d;
 }
 
 .form :-ms-input-placeholder {
-  color: black;
   color: #4d4d4d;
 }
 
 .form ::-ms-input-placeholder {
-  color: black;
   color: #4d4d4d;
 }
 
 .form ::placeholder {
-  color: black;
   color: #4d4d4d;
 }
 
 .footer {
+  background-color: #333333;
   height: 200px;
   padding: 10px 25px;
 }
@@ -222,44 +258,31 @@ body, html {
   color: white;
   font-size: 18px;
   font-weight: 400;
+  font-family: 'Shrikhand';
 }
 
 .footer__menu {
   padding: 0;
-}
-
-.footer__menu li {
   list-style: none;
   font-family: 'Roboto';
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
+  margin-bottom: 11px;
+}
+
+.footer__menu li {
   margin-bottom: 10px;
 }
 
-.footer__menu__proposal {
+.footer__menu li .proposal {
+  margin-right: 10px;
   font-size: 14px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
-.footer__menu__proposal span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footer__menu__partner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footer__menu__partner i {
+.footer__menu li .partner {
   font-size: 12px;
-  padding-right: 7px;
+  margin-right: 8px;
 }
 
 .booking {
@@ -291,11 +314,18 @@ body, html {
   margin: 1px 25px 0px 35px;
   color: gray;
   font-weight: 300;
-  text-shadow: 0px 0px 0px #7e7d7d;
+  text-shadow: 0 0 0 #7e7d7d;
+}
+
+.booking .button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ae80e5), to(#fface8));
+  background: linear-gradient(to bottom right, #ae80e5, #fface8);
+  -webkit-box-shadow: 0 7px 15px #7e7d7d;
+          box-shadow: 0 7px 15px #7e7d7d;
 }
 
 .functions {
-  margin: 30px 0px 40px 0px;
+  margin: 30px 0 40px 0;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,7 +348,7 @@ body, html {
   counter-reset: li;
   font-family: 'Roboto';
   padding: 1px;
-  margin: 0px 15px 0px 30px;
+  margin: 0 15px 0 30px;
 }
 
 .functions__menu li {
@@ -326,8 +356,8 @@ body, html {
   width: 325px;
   height: 75px;
   border-radius: 18px;
-  -webkit-box-shadow: 0px 5px 13px lightgrey;
-          box-shadow: 0px 5px 13px lightgrey;
+  -webkit-box-shadow: 0 5px 13px lightgrey;
+          box-shadow: 0 5px 13px lightgrey;
   color: #000000;
   font-weight: 700;
   margin-bottom: 25px;
@@ -353,7 +383,7 @@ body, html {
 }
 
 .functions__menu li i {
-  margin: 0px 25px;
+  margin: 0 25px;
   font-size: 20px;
   color: gray;
 }
@@ -373,6 +403,10 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 45px;
+  /*.heart
+    {
+        color: map-get($black_shades, medium);
+    }*/
 }
 
 .restaurant h1 {
@@ -391,11 +425,124 @@ body, html {
   color: black;
 }
 
-.restaurant .heart {
-  color: gray;
+.photo-menu {
+  height: 220px;
+  overflow: hidden;
 }
 
-/*@import "./page2";
+.photo-menu img {
+  width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
-// Themes*/
+.menu-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  height: auto;
+  background-color: #f2f2f2;
+  padding-bottom: 40px;
+}
+
+.menu-content__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 40px 38px 20px 22px;
+}
+
+.menu-content__header h1 {
+  font-family: 'Shrikhand';
+  font-size: 28px;
+  margin: 0;
+}
+
+.menu-content__heading {
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333333;
+  padding-left: 5px;
+}
+
+.menu-content__choices {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-content__choices .detail {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 355px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 13px 20px 15px 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 0px 20px lightgrey;
+          box-shadow: 0px 0px 20px lightgrey;
+}
+
+.menu-content__choices .detail .first {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 5px 0;
+}
+
+.menu-content__choices .detail .second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-content__choices .detail .second .topping {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.menu-content__choices .detail .second .price {
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0;
+}
+
+.menu-content .button {
+  width: 200px;
+}
 /*# sourceMappingURL=style.css.map */

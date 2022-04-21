@@ -1,6 +1,6 @@
 .footer
 {
-    background-color: map-get($black_shades, grey);
+    background-color: map-get($black_shades, very_light); 
     height: 200px;
     padding: 10px 25px;
     &__heading
@@ -8,37 +8,31 @@
     color: white;
     font-size: 18px;
     font-weight: 400;
+    font-family: 'Shrikhand';
     }
     &__menu
     {
-        padding: 0;
-        li
-        {
+            padding: 0;
             list-style: none;
             font-family: 'Roboto';
             color: $color_white;
             font-size: 16px;
             font-weight: 400;
-            margin-bottom: 10px;
-        }
-        &__proposal
-        {
-            font-size: 14px;
-            padding-right: 10px;
-            display: flex;
-            span
+            margin-bottom: 11px;
+            li
             {
-                display: flex;
+                margin-bottom: 10px;
+                .proposal
+                {
+                    margin-right: 10px;
+                    font-size: 14px;
+                }
+                .partner
+                {
+                    font-size: 12px;
+                    margin-right: 8px;
+                }
+
             }
-        }
-        &__partner
-        {
-            display: flex;
-            i 
-            {
-                font-size: 12px;
-                padding-right: 7px;
-            }
-        }
     }
 }

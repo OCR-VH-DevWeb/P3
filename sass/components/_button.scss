@@ -1,6 +1,6 @@
 .button
 {
-    background: linear-gradient(to bottom right, $color_secondary, $color_primary);
+    background: $gradient;
     color: white;
     font-family: 'Roboto';
     font-weight: 400;
@@ -11,4 +11,6 @@
     border-radius: 25px;
     box-shadow: 1px 5px 5px lightgrey;
     margin: 32px;
+    cursor: pointer;
+    
 }

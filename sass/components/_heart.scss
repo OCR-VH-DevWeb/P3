@@ -1,4 +1,25 @@
-/*.heart 
+
+.like
 {
-    color: map-get($black_shades, medium);
+    width: 30px;
+    height: 25px;
+    border: none;
+    
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    cursor: pointer;
+    .heart
+    {
+        color: map-get($black_shades, very_light);
+        font-size: 25px;
+    }
+}
+/*.heart:hover
+{
+    background-clip: text;
+    -webkit-background-clip: text;
+    background: transparent;
+    
 }*/
+/*:active*/

@@ -1,0 +1,4 @@
+@function change_light($color, $color_2)
+{
+    @return linear-gradient(to bottom right, lighten($color, 10%), lighten($color_2, 10%));
+}

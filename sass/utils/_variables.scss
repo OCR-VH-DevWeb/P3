@@ -4,6 +4,7 @@ $color_tertiary: #99E2D0;
 
 $background_primary: #eaeaea;
 $background_secondary: #f6f6f6;
+$gradient: linear-gradient(to bottom right, $color_secondary, $color_primary);
 
 $color_white: #ffffff;
 $color_black: #000000;
@@ -18,7 +19,8 @@ $breakpoints: (
 );
 
 $black_shades: (
+    very_light: lighten($color_black, 20%),
+    light: lighten($color_black, 35%),
     medium: lighten($color_black, 50%),
-    dark: lighten($color_black, 80%),
-    light: lighten($color_black, 22%),
+    dark: lighten($color_black, 95%),
 );

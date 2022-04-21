@@ -2,7 +2,7 @@
 {
     height: 50px;
     background-color: $background_primary;
-    box-shadow: inset 0px 3px 4px lightgrey;
+    box-shadow: inset 0 3px 4px lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +24,7 @@
     }
     ::placeholder
     {
-        color: black;
         color: lighten($color_black, 30%);
-
     }   
     
 

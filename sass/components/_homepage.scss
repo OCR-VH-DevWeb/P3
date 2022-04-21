@@ -1,0 +1,13 @@
+.header__homepage
+{
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    .arrow
+    {
+        font-size: 20px;
+        color: map-get($black_shades, very_light); 
+    }
+}

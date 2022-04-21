@@ -1,7 +1,7 @@
 // Utils
 @import "./utils/variables";
-/*@import "./utils/functions";
-@import "./utils/mixins";
+@import "./utils/functions";
+/*@import "./utils/mixins";
 @import "./utils/extensions";
 
 // Vendors*/
@@ -16,6 +16,7 @@
 @import "./components/card";
 @import "./components/heart";
 @import "./components/new";
+@import "./components/homepage";
 
 // Layout
 @import "./layout/header";
@@ -26,6 +27,6 @@
 
 // Pages
 @import "./pages/accueil";
-/*@import "./page2";
+@import "./pages/menu";
 
 // Themes*/
