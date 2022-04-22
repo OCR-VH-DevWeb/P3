@@ -60,7 +60,7 @@ body, html {
 }
 
 .restaurant-card {
-  width: 350px;
+  width: 340px;
   height: 250px;
   background-color: white;
   border-radius: 15px;
@@ -426,14 +426,28 @@ body, html {
   color: black;
 }
 
+.body {
+  background-color: #f2f2f2;
+}
+
+.header {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.header__homepage {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+}
+
 .photo-menu {
-  height: 220px;
-  overflow: hidden;
+  height: 260px;
 }
 
 .photo-menu img {
   width: 100%;
-  height: 270px;
+  height: 110%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -449,13 +463,15 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 25px;
+  border-radius: 30px 30px 0 0;
   height: auto;
   background-color: #f2f2f2;
-  padding-bottom: 40px;
+  position: relative;
+  top: -30px;
 }
 
 .menu-content__header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,7 +481,7 @@ body, html {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding: 40px 38px 20px 22px;
+  padding: 40px 35px 20px 20px;
 }
 
 .menu-content__header h1 {
@@ -544,6 +560,7 @@ body, html {
 }
 
 .menu-content .button {
-  width: 200px;
+  width: 190px;
+  margin: 25px 30px 40px 30px;
 }
 /*# sourceMappingURL=style.css.map */
