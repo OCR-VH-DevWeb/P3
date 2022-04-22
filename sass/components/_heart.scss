@@ -4,15 +4,11 @@
     width: 30px;
     height: 25px;
     border: none;
-    
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
+    font-size: 25px;
     cursor: pointer;
     .heart
     {
         color: map-get($black_shades, very_light);
-        font-size: 25px;
     }
 }
 /*.heart:hover
@@ -22,4 +18,6 @@
     background: transparent;
     
 }*/
-/*:active*/
+/*&:active + .heart
+{
+}*/
