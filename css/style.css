@@ -74,6 +74,7 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   /*.restaurant-card__image
     {
         /*right: 30px;
@@ -82,19 +83,22 @@ body, html {
 }
 
 .restaurant-card__image {
-  height: 70%;
-  /*.new
-        {
-        }*/
+  height: 73%;
 }
 
 .restaurant-card__image img {
   width: 100%;
-  height: 88%;
+  height: 100%;
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
+}
+
+.restaurant-card__image .new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .restaurant-card__heading {
