@@ -303,6 +303,14 @@ body, html {
           align-items: center;
 }
 
+@media screen and (min-width: 576px) {
+  .booking {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .booking__title {
   margin: 0;
   font-size: 24px;
@@ -335,6 +343,14 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 576px) {
+  .functions {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .functions__title {
@@ -396,34 +412,62 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 45px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0px 50px 0px;
   /*.heart
     {
         color: map-get($black_shades, medium);
     }*/
 }
 
+@media screen and (min-width: 768px) {
+  .restaurant {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .restaurant h1 {
+  width: 100%;
   font-size: 25px;
   font-weight: 800;
-  margin: 50px 20px 25px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  margin: 5px 20px 25px 25px;
+}
+
+@media screen and (min-width: 576px) {
+  .restaurant h1 {
+    text-align: center;
+  }
 }
 
 .restaurant .link {
   text-decoration: none;
   color: black;
+}
+
+@media screen and (min-width: 992px) {
+  .restaurant .restaurant-card {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .body {

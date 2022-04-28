@@ -13,9 +13,10 @@ $color_grey: #7e7d7d;
 $padding_card: 15px;
 
 $breakpoints: (
-    mobile: 375px,
-    tablette: 750px,
-    desktop: 1200px,
+    inter: 576px,
+    tablette: 768px,
+    desktop: 992px,
+    
 );
 
 $black_shades: (
