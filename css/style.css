@@ -16,6 +16,7 @@
 /*Fonts*/
 html, body {
   font-family: 'Roboto', sans-serif, 'Shrikhand', cursive;
+  max-width: 1400px;
 }
 
 body, html {
@@ -132,27 +133,35 @@ body, html {
         margin-top: 13px;
     }  */
 .like {
-  width: 30px;
-  height: 25px;
   border: none;
   font-size: 25px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .like .heart {
   color: #333333;
 }
 
-/*.heart:hover
+.like .heart--full {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* .heart:hover
 {
     background-clip: text;
     -webkit-background-clip: text;
     background: transparent;
     
-}*/
-/*&:active + .heart
+}
+&:active + .heart
 {
-}*/
+} */
 .new {
   border: none;
   background-color: #99E2D0;
@@ -520,18 +529,18 @@ body, html {
   }
 }
 
-.menu-content {
+.content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*    display: flex;flex-wrap: wrap;justify-content: space-around;*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 20px 25px 20px;
+}
+
+.menu-content {
   border-radius: 30px 30px 0 0;
   height: auto;
   background-color: #f2f2f2;
