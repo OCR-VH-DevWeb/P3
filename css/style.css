@@ -455,6 +455,13 @@ body, html {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 45px 20px 45px 20px;
+  /*@media  screen and (min-width: map-get($breakpoints, desktop))
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }*/
 }
 
 @media screen and (min-width: 576px) {
@@ -477,27 +484,16 @@ body, html {
   color: black;
 }
 
-.restaurant .restaurant-card {
-  /*@media screen and (min-width: map-get($breakpoints, desktop))
-        {
-            width: auto;
-        }*/
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .restaurant .restaurant-card {
-    margin-right: 15px;
+    width: 230px;
   }
 }
 
-.footer {
-  /* &__heading
-    {
-        @media screen and (min-width: map-get($breakpoints , inter))
-        {
-            margin-left: 20px;
-        }
-    }*/
+@media screen and (min-width: 1400px) {
+  .restaurant .restaurant-card {
+    width: 330px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -505,10 +501,21 @@ body, html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-flow: nowrap;
+        flex-flow: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__heading {
+    width: 20%;
   }
 }
 
@@ -528,17 +535,6 @@ body, html {
   background-color: #f2f2f2;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .header {
   position: relative;
   background-color: #ffffff;
@@ -552,18 +548,24 @@ body, html {
 
 .photo-menu {
   height: 260px;
-  /* @media screen and (min-width: map-get($breakpoints, inter))
-    {
-        height: 300px;
-    }
-    @media screen and (min-width: map-get($breakpoints, tablette))
-    {
-        height: 400px;
-    }
-    @media screen and (min-width: map-get($breakpoints, desktop))
-    {
-        height: 500px;
-    }*/
+}
+
+@media screen and (min-width: 576px) {
+  .photo-menu {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .photo-menu {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .photo-menu {
+    height: 500px;
+  }
 }
 
 .photo-menu img {
@@ -571,29 +573,28 @@ body, html {
   height: 110%;
   -o-object-fit: cover;
      object-fit: cover;
-  /* @media screen and (min-width: map-get($breakpoints, inter))
-        {
-            height: 115%; 
-        }*/
 }
 
-.content {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 25px 20px 25px 20px;
-  /*flex-wrap: wrap;
-    justify-content: center*/
+@media screen and (min-width: 576px) {
+  .photo-menu img {
+    height: 115%;
+  }
 }
 
 .menu-content {
-  border-radius: 30px 30px 0 0;
+  width: 100%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 35px 35px 0 0;
   background-color: #f2f2f2;
+  padding: 35px 20px 25px 20px;
   position: relative;
   top: -30px;
 }
@@ -609,94 +610,90 @@ body, html {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding: 40px 35px 20px 20px;
-  /*@media screen and (min-width: map-get($breakpoints, inter))
-        {
-            justify-content: center;    
-        }*/
 }
 
 .menu-content__header h1 {
   font-family: 'Shrikhand';
   font-size: 28px;
+  font-weight: 500;
   margin: 0;
 }
 
 .menu-content__header .like {
-  margin-left: 40px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
 }
 
-.menu-content__heading {
-  text-transform: uppercase;
-  font-size: 17px;
-  font-weight: 400;
-  color: #333333;
-  padding-left: 5px;
+.menu-content__header .like .heart {
+  position: absolute;
 }
 
-.menu-content__choices {
-  list-style: none;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.menu-content__choices .detail {
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 15px;
-  width: 355px;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 13px 20px 15px 10px;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0px 0px 20px lightgrey;
-          box-shadow: 0px 0px 20px lightgrey;
-}
-
-.menu-content__choices .detail .first {
-  font-size: 18px;
-  font-weight: 800;
-  margin: 0 0 5px 0;
-}
-
-.menu-content__choices .detail .second {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.menu-content__choices .detail .second .topping {
-  font-size: 15px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.menu-content__choices .detail .second .price {
-  font-weight: 800;
-  font-size: 16px;
-  margin: 0;
-}
-
-.menu-content .button {
-  width: 190px;
-  margin: 25px 30px 40px 30px;
-}
+/*.menu-content
+{*/
+/*@media screen and (min-width: map-get($breakpoints, inter))
+        {
+            justify-content: center;    
+        }
+        
+        
+    }
+        .heading
+        {
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 400;
+            color: map-get($black_shades , very_light);
+            padding-left: 5px;
+        }
+        .choices
+        {
+            list-style: none; 
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .detail
+            {
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 15px;
+                width: 355px;
+                height: 70px;
+                display: flex;
+                flex-direction: column;
+                padding: 13px 20px 15px 10px;
+                margin-bottom: 10px;
+                box-shadow: 0px 0px 20px lightgrey;
+                .first
+                {
+                    font-size: 18px;
+                    font-weight: 800;
+                    margin: 0 0 5px 0;  
+                }
+                .second
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    .topping
+                    {
+                        font-size: 15px;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                    .price
+                    {
+                        font-weight: 800;
+                        font-size: 16px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    .button
+    {
+        width: 190px;
+        margin: 25px 30px 40px 30px;
+    }
+}*/
 /*# sourceMappingURL=style.css.map */

@@ -2,12 +2,6 @@
 {
     background-color: map-get($black_shades , dark);
 }
-.main
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 .header
 {
     position: relative;
@@ -22,7 +16,7 @@
 .photo-menu
 {
     height: 260px;
-   /* @media screen and (min-width: map-get($breakpoints, inter))
+    @media screen and (min-width: map-get($breakpoints, inter))
     {
         height: 300px;
     }
@@ -33,32 +27,29 @@
     @media screen and (min-width: map-get($breakpoints, desktop))
     {
         height: 500px;
-    }*/
+    }
     img
     {
         width: 100%;
         height: 110%;
         object-fit: cover;
-       /* @media screen and (min-width: map-get($breakpoints, inter))
+        @media screen and (min-width: map-get($breakpoints, inter))
         {
             height: 115%; 
-        }*/
+        }
     }
-}
-.content
-{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 20px 25px 20px;
-    /*flex-wrap: wrap;
-    justify-content: center*/
 }
 .menu-content
 {
-    border-radius: 30px 30px 0 0;
+    width: 100%;
     height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 35px 35px 0 0;
     background-color: map-get($black_shades , dark);
+    padding: 35px 20px 25px 20px;
+
     position: relative;
     top: -30px;
     &__header
@@ -67,23 +58,44 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        padding: 40px 35px 20px 20px;
-        /*@media screen and (min-width: map-get($breakpoints, inter))
-        {
-            justify-content: center;    
-        }*/
         h1
         {
             font-family: 'Shrikhand';
             font-size: 28px;
+            font-weight: 500;
             margin: 0;
         }
         .like
         {
-            margin-left: 40px;
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            .heart
+            {
+                position: absolute;
+            }
         }
     }
-        &__heading
+    &__content
+    {
+
+    }
+}
+/*.menu-content
+{*/
+    
+    
+    
+    
+    
+        /*@media screen and (min-width: map-get($breakpoints, inter))
+        {
+            justify-content: center;    
+        }
+        
+        
+    }
+        .heading
         {
             text-transform: uppercase;
             font-size: 17px;
@@ -91,7 +103,7 @@
             color: map-get($black_shades , very_light);
             padding-left: 5px;
         }
-        &__choices
+        .choices
         {
             list-style: none; 
             padding: 0;
@@ -140,8 +152,4 @@
         width: 190px;
         margin: 25px 30px 40px 30px;
     }
-}
-
-
-
-
+}*/

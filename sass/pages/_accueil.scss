@@ -116,6 +116,13 @@
     {
         justify-content: space-between;
     }
+    /*@media  screen and (min-width: map-get($breakpoints, desktop))
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }*/
     h1
     {
         width: 100%;
@@ -130,14 +137,14 @@
     }
     .restaurant-card
     {
-        @media screen and (min-width: map-get($breakpoints, tablette))
+        @media screen and (min-width: map-get($breakpoints, desktop))
         {
-            margin-right: 15px;
+            width: 230px;
         }
-        /*@media screen and (min-width: map-get($breakpoints, desktop))
+        @media screen and (min-width: map-get($breakpoints, max))
         {
-            width: auto;
-        }*/
+            width: 330px;
+        }
     }
 }
 .footer
@@ -145,16 +152,18 @@
     @media screen and (min-width: map-get($breakpoints , tablette))
     {
         display: flex;
+        flex-flow: nowrap;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
     }
-   /* &__heading
+    &__heading
     {
-        @media screen and (min-width: map-get($breakpoints , inter))
+        @media screen and (min-width: map-get($breakpoints , tablette))
         {
-            margin-left: 20px;
+            width: 20%;
         }
-    }*/
+    }
     &__menu
     {
         @media screen and (min-width: map-get($breakpoints , tablette))
