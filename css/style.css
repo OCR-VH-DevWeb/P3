@@ -23,6 +23,12 @@ body, html {
   font-family: 'Roboto', "Shrikhand", sans-serif, cursive;
 }
 
+.border {
+  width: 43px;
+  height: 4px;
+  background-color: #99E2D0;
+}
+
 .button {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -629,6 +635,22 @@ body, html {
   position: absolute;
 }
 
+.menu-content__content {
+  width: 100%;
+  margin: 20px 0 20px 0;
+}
+
+.menu-content__content .heading {
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.menu-content__content .border {
+  margin-top: -8px;
+}
+
 /*.menu-content
 {*/
 /*@media screen and (min-width: map-get($breakpoints, inter))
@@ -638,14 +660,7 @@ body, html {
         
         
     }
-        .heading
-        {
-            text-transform: uppercase;
-            font-size: 17px;
-            font-weight: 400;
-            color: map-get($black_shades , very_light);
-            padding-left: 5px;
-        }
+        
         .choices
         {
             list-style: none; 

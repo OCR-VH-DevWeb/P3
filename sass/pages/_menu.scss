@@ -78,7 +78,19 @@
     }
     &__content
     {
-
+        width: 100%;
+        margin: 20px 0 20px 0;
+        .heading
+        {
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 400;
+            color: map-get($black_shades , very_light);
+        }
+        .border
+        {
+            margin-top: -8px;
+        }
     }
 }
 /*.menu-content
@@ -95,14 +107,7 @@
         
         
     }
-        .heading
-        {
-            text-transform: uppercase;
-            font-size: 17px;
-            font-weight: 400;
-            color: map-get($black_shades , very_light);
-            padding-left: 5px;
-        }
+        
         .choices
         {
             list-style: none; 
