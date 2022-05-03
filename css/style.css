@@ -123,8 +123,12 @@ body, html {
 
 .restaurant-card .like {
   position: absolute;
-  bottom: 35px;
+  bottom: 25px;
   right: 25px;
+}
+
+.restaurant-card .like .heart {
+  position: absolute;
 }
 
 /*.restaurant-card__image
@@ -139,6 +143,16 @@ body, html {
   background-color: transparent;
 }
 
+.like:hover .heart {
+  opacity: 0;
+}
+
+.like:hover .heart--full {
+  opacity: 1;
+  -webkit-transition: opacity 2.5s;
+  transition: opacity 2.5s;
+}
+
 .like .heart {
   color: #333333;
 }
@@ -150,9 +164,10 @@ body, html {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  opacity: 0;
 }
 
-/* .heart:hover
+/*.heart:hover
 {
     background-clip: text;
     -webkit-background-clip: text;
@@ -310,14 +325,10 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media screen and (min-width: 576px) {
-  .booking {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  /*@media screen and (min-width: map-get($breakpoints, inter))
+    {
+        justify-content: center;
+    }*/
 }
 
 .booking__title {
@@ -354,11 +365,10 @@ body, html {
           flex-direction: column;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .functions {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -375,6 +385,17 @@ body, html {
   font-family: 'Roboto';
   padding: 1px;
   margin: 0 15px 0 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .functions__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .functions__menu li {
@@ -394,6 +415,12 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .functions__menu li {
+    width: 30%;
+  }
 }
 
 .functions__menu li:hover {
@@ -417,6 +444,7 @@ body, html {
 .restaurant {
   font-family: 'Roboto';
   height: auto;
+  /*width: 100%;*/
   background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -426,17 +454,14 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 0px 50px 0px;
-  /*.heart
-    {
-        color: map-get($black_shades, medium);
-    }*/
+  padding: 45px 20px 45px 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .restaurant {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -444,13 +469,7 @@ body, html {
   width: 100%;
   font-size: 25px;
   font-weight: 800;
-  margin: 5px 20px 25px 25px;
-}
-
-@media screen and (min-width: 576px) {
-  .restaurant h1 {
-    text-align: center;
-  }
+  margin-bottom: 25px;
 }
 
 .restaurant .link {
@@ -458,29 +477,66 @@ body, html {
   color: black;
 }
 
-@media screen and (min-width: 992px) {
+.restaurant .restaurant-card {
+  /*@media screen and (min-width: map-get($breakpoints, desktop))
+        {
+            width: auto;
+        }*/
+}
+
+@media screen and (min-width: 768px) {
   .restaurant .restaurant-card {
-    width: 450px;
+    margin-right: 15px;
   }
 }
 
-@media screen and (min-width: 576px) {
-  footer {
+.footer {
+  /* &__heading
+    {
+        @media screen and (min-width: map-get($breakpoints , inter))
+        {
+            margin-left: 20px;
+        }
+    }*/
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
   }
 }
 
 .body {
   background-color: #f2f2f2;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header {
@@ -496,24 +552,18 @@ body, html {
 
 .photo-menu {
   height: 260px;
-}
-
-@media screen and (min-width: 576px) {
-  .photo-menu {
-    height: 300px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .photo-menu {
-    height: 400px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .photo-menu {
-    height: 500px;
-  }
+  /* @media screen and (min-width: map-get($breakpoints, inter))
+    {
+        height: 300px;
+    }
+    @media screen and (min-width: map-get($breakpoints, tablette))
+    {
+        height: 400px;
+    }
+    @media screen and (min-width: map-get($breakpoints, desktop))
+    {
+        height: 500px;
+    }*/
 }
 
 .photo-menu img {
@@ -521,12 +571,10 @@ body, html {
   height: 110%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-@media screen and (min-width: 576px) {
-  .photo-menu img {
-    height: 115%;
-  }
+  /* @media screen and (min-width: map-get($breakpoints, inter))
+        {
+            height: 115%; 
+        }*/
 }
 
 .content {
@@ -538,6 +586,8 @@ body, html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 25px 20px 25px 20px;
+  /*flex-wrap: wrap;
+    justify-content: center*/
 }
 
 .menu-content {
@@ -560,14 +610,10 @@ body, html {
       -ms-flex-align: baseline;
           align-items: baseline;
   padding: 40px 35px 20px 20px;
-}
-
-@media screen and (min-width: 576px) {
-  .menu-content__header {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  /*@media screen and (min-width: map-get($breakpoints, inter))
+        {
+            justify-content: center;    
+        }*/
 }
 
 .menu-content__header h1 {

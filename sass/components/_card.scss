@@ -49,8 +49,12 @@
     .like
         {
             position: absolute;
-            bottom: 35px;
+            bottom: 25px;
             right: 25px;
+            .heart
+            {
+                position: absolute;
+            }
         }
 }    
 

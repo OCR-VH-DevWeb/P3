@@ -5,6 +5,15 @@
     font-size: 25px;
     cursor: pointer;
     background-color: transparent;
+    &:hover .heart
+    {
+        opacity: 0;
+        &--full
+        {
+            opacity: 1;
+            transition: opacity 2.5s;
+        }
+    }
     .heart
     {
         color: map-get($black_shades, very_light);
@@ -15,12 +24,13 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
+            opacity: 0;
         }
        
     }
 }
 
-/* .heart:hover
+    /*.heart:hover
 {
     background-clip: text;
     -webkit-background-clip: text;
