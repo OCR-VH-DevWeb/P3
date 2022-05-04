@@ -600,7 +600,7 @@ body, html {
           justify-content: center;
   border-radius: 35px 35px 0 0;
   background-color: #f2f2f2;
-  padding: 35px 20px 25px 20px;
+  padding: 35px 15px 25px 15px;
   position: relative;
   top: -30px;
 }
@@ -628,7 +628,7 @@ body, html {
 .menu-content__header .like {
   position: absolute;
   top: 35px;
-  right: 35px;
+  right: 30px;
 }
 
 .menu-content__header .like .heart {
@@ -637,18 +637,67 @@ body, html {
 
 .menu-content__content {
   width: 100%;
-  margin: 20px 0 20px 0;
+  margin-top: 20px;
 }
 
-.menu-content__content .heading {
+.menu-content__content .topic {
+  margin-bottom: 45px;
+}
+
+.menu-content__content .topic .heading {
   text-transform: uppercase;
   font-size: 17px;
   font-weight: 400;
   color: #333333;
 }
 
-.menu-content__content .border {
+.menu-content__content .topic .border {
   margin-top: -8px;
+}
+
+.menu-content__content .topic .choices {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-content__content .topic .choices .detail {
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 15px 20px 10px 10px;
+  -webkit-box-shadow: 0 0 20px lightgrey;
+          box-shadow: 0 0 20px lightgrey;
+}
+
+.menu-content__content .topic .choices .detail .first {
+  margin: 0%;
+  font-size: 18px;
+}
+
+.menu-content__content .topic .choices .detail .second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.menu-content__content .topic .choices .detail .second .topping {
+  margin: 0;
+}
+
+.menu-content__content .topic .choices .detail .second .price {
+  margin: 0;
+  /*shades dark sur price*/
+  font-weight: 800;
+}
+
+.menu-content .button {
+  margin: 5px 32px 20px 32px;
 }
 
 /*.menu-content
@@ -657,39 +706,22 @@ body, html {
         {
             justify-content: center;    
         }
-        
-        
     }
         
-        .choices
-        {
-            list-style: none; 
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .detail
-            {
-                background-color: white;
-                border: 1px solid white;
-                border-radius: 15px;
+        choices
+            detail
                 width: 355px;
-                height: 70px;
-                display: flex;
-                flex-direction: column;
-                padding: 13px 20px 15px 10px;
-                margin-bottom: 10px;
-                box-shadow: 0px 0px 20px lightgrey;
+                border: 1px solid $color_white;
+
+                
                 .first
                 {
-                    font-size: 18px;
+                    
                     font-weight: 800;
                     margin: 0 0 5px 0;  
                 }
                 .second
                 {
-                    display: flex;
-                    justify-content: space-between;
                     .topping
                     {
                         font-size: 15px;
