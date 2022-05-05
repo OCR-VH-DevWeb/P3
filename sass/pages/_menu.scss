@@ -79,9 +79,18 @@
     {
         width: 100%;
         margin-top: 20px;
+        @media screen and (min-width: map-get($breakpoints, desktop))
+        {
+            display: flex;
+            justify-content: space-between;
+        }
         .topic
         {
             margin-bottom: 45px;
+            @media screen and (min-width:map-get($breakpoints, desktop))
+            {
+                width: 32%;
+            }
             .heading
             {
                 text-transform: uppercase;
@@ -105,6 +114,10 @@
                     margin-bottom: 15px;
                     padding: 15px 20px 10px 10px;
                     box-shadow: 0 0 20px lightgrey;
+                    @media screen and (min-width:map-get($breakpoints, desktop))
+                    {
+                        height: 80px;
+                    }
                     .first
                     {
                         margin: 0%;

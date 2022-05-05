@@ -640,8 +640,25 @@ body, html {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 992px) {
+  .menu-content__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .menu-content__content .topic {
   margin-bottom: 45px;
+}
+
+@media screen and (min-width: 992px) {
+  .menu-content__content .topic {
+    width: 32%;
+  }
 }
 
 .menu-content__content .topic .heading {
@@ -668,6 +685,12 @@ body, html {
   padding: 15px 20px 10px 10px;
   -webkit-box-shadow: 0 0 20px lightgrey;
           box-shadow: 0 0 20px lightgrey;
+}
+
+@media screen and (min-width: 992px) {
+  .menu-content__content .topic .choices .detail {
+    height: 80px;
+  }
 }
 
 .menu-content__content .topic .choices .detail .first {
