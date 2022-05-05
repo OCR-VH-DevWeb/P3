@@ -11,13 +11,14 @@
 @import "./base/typography";
 
 // Components
-@import "./components/border";
 @import "./components/button";
 @import "./components/number";
 @import "./components/card";
 @import "./components/heart";
 @import "./components/new";
 @import "./components/homepage";
+@import "./components/border";
+@import "./components/loadercircles";
 
 // Layout
 @import "./layout/header";
