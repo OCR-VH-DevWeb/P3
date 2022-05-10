@@ -2,13 +2,15 @@
 {
     background-color: map-get($black_shades, very_light); 
     height: 200px;
-    padding: 10px 25px;
+    padding: 25px;
+    
     &__heading
     {
     color: white;
     font-size: 18px;
     font-weight: 400;
     font-family: 'Shrikhand';
+    margin-bottom: 20px;
     }
     &__menu
     {
