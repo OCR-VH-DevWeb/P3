@@ -1,9 +1,75 @@
+/*linear-gradient(349deg, rgb(147, 86, 220) 0%, rgb(147, 86, 220) 14%, rgb(255, 121, 218) 92%);*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinreverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spinreverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 0.9;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0.9;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 /*@import "./utils/mixins";
 @import "./utils/extensions";
 
 // Vendors*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
   /* Opera/IE 8+ */
@@ -16,6 +82,7 @@
 /*Fonts*/
 html, body {
   font-family: 'Roboto', sans-serif, 'Shrikhand', cursive;
+  min-width: 375px;
   max-width: 1400px;
 }
 
@@ -24,8 +91,7 @@ body, html {
 }
 
 .button {
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(349deg, #9356dc 0%, #9356dc 14%, #ff79da 92%);
   color: white;
   font-family: 'Roboto';
   font-weight: 400;
@@ -209,11 +275,23 @@ body, html {
 }
 
 .section {
-  background-color: black;
-  height: 500px;
-  line-height: 500px;
-  opacity: 0.5;
-  z-index: 1;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  background-color: #7e7d7d;
+  position: fixed;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: 3s both 1.5s loader;
+          animation: 3s both 1.5s loader;
 }
 
 .section__loader {
@@ -221,7 +299,16 @@ body, html {
   height: 100px;
   display: inline-block;
   vertical-align: middle;
-  position: relative;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section__loader-circles {
@@ -242,7 +329,6 @@ body, html {
   border-radius: 50px;
   border: 3px solid transparent;
   border-top-color: #FF79DA;
-  /*opacity: 0.8;*/
   -webkit-animation: spin 5s linear infinite;
           animation: spin 5s linear infinite;
 }
@@ -257,53 +343,27 @@ body, html {
   border-radius: 50px;
   border: 3px solid transparent;
   border-top-color: #99E2D0;
-  /*opacity: 0.5;*/
   -webkit-animation: spin 10s linear infinite;
           animation: spin 10s linear infinite;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes spinreverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-@keyframes spinreverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
+.confirm {
+  width: 70px;
+  height: 70px;
+  background-color: #99E2D0;
+  color: black;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header {
@@ -412,6 +472,12 @@ body, html {
 .footer__menu li .partner {
   font-size: 12px;
   margin-right: 8px;
+}
+
+.omf {
+  font-family: 'Shrikhand';
+  background-color: linear-gradient(to bottom right, #FF79DA, #9356DC) 1px 1px 10px;
+  font-size: 100px;
 }
 
 .booking {
@@ -633,6 +699,11 @@ body, html {
             justify-content: space-between;
     width: 80%;
   }
+}
+
+.footer__menu .mailto {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .body {

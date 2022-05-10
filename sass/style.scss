@@ -1,6 +1,7 @@
 // Utils
 @import "./utils/variables";
 @import "./utils/functions";
+@import "./utils/animation";
 /*@import "./utils/mixins";
 @import "./utils/extensions";
 
@@ -19,6 +20,7 @@
 @import "./components/homepage";
 @import "./components/border";
 @import "./components/loadercircles";
+@import "./components/confirm";
 
 // Layout
 @import "./layout/header";

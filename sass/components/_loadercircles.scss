@@ -1,16 +1,25 @@
 .section
 {
-    background-color: black;
-    height: 500px;
-    line-height: 500px;opacity: 0.5;
-    z-index: 1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: $color_grey;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 3s both 1.5s loader;
     &__loader
     {
         width: 100px;
         height: 100px;
         display: inline-block;
         vertical-align: middle;
-        position: relative;
+        position: absolute;  
+        display: flex;  
+        justify-content: center;
+        align-items: center;
     }
     &__loader-circles
     {
@@ -29,7 +38,6 @@
             border-radius: 50px;
             border: 3px solid transparent;
             border-top-color: #FF79DA;  
-            /*opacity: 0.8;*/
             animation: spin 5s linear infinite; 
         }
         &:before
@@ -43,16 +51,7 @@
             border-radius: 50px;
             border: 3px solid transparent;
             border-top-color: #99E2D0;  
-            /*opacity: 0.5;*/
             animation: spin 10s linear infinite;
         }
     }
-    @keyframes spin{
-        0%{ transform: rotate(0deg); }
-        100%{ transform: rotate(360deg); }
-      }
-      @keyframes spinreverse{
-        0%{ transform: rotate(0deg); }
-        100%{ transform: rotate(-360deg); }
-      }
 }

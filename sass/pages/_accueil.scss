@@ -1,3 +1,9 @@
+.omf
+{
+    font-family: 'Shrikhand';
+    background-color: $gradient 1px 1px 10px;
+    font-size: 100px;
+}
 .booking
 {
     background-color: $background_secondary;
@@ -27,7 +33,6 @@
         font-weight: 300;
         text-shadow: 0 0 0 #7e7d7d;
     }
-   
     .button:hover
     {
         background: change_light($color_primary, $color_secondary);
@@ -171,6 +176,11 @@
             display: flex;
             justify-content: space-between;
             width: 80%;
+        }
+        .mailto
+        {
+            color: $color_white;
+            text-decoration: none;
         }
     }
 }
