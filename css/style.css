@@ -844,6 +844,8 @@ body, html {
 .menu-content__content .topic .choices {
   list-style: none;
   padding: 0;
+  -webkit-animation: fade;
+          animation: fade;
 }
 
 .menu-content__content .topic .choices .detail {
@@ -854,12 +856,11 @@ body, html {
   padding: 15px 20px 10px 10px;
   -webkit-box-shadow: 0 0 20px lightgrey;
           box-shadow: 0 0 20px lightgrey;
-}
-
-@media screen and (min-width: 992px) {
-  .menu-content__content .topic .choices .detail {
-    height: 80px;
-  }
+  overflow: t;
+  /*@media screen and (min-width:map-get($breakpoints, desktop))
+                    {
+                        height: 80px;
+                    }*/
 }
 
 .menu-content__content .topic .choices .detail .first {
@@ -880,6 +881,9 @@ body, html {
 
 .menu-content__content .topic .choices .detail .second .topping {
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu-content__content .topic .choices .detail .second .price {

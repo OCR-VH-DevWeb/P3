@@ -107,6 +107,7 @@
             {
                 list-style: none; 
                 padding: 0;
+                animation: fade;
                 .detail
                 {
                     height: 70px;
@@ -115,10 +116,11 @@
                     margin-bottom: 15px;
                     padding: 15px 20px 10px 10px;
                     box-shadow: 0 0 20px lightgrey;
-                    @media screen and (min-width:map-get($breakpoints, desktop))
+                    overflow: t;
+                    /*@media screen and (min-width:map-get($breakpoints, desktop))
                     {
                         height: 80px;
-                    }
+                    }*/
                     .first
                     {
                         margin: 0%;
@@ -130,9 +132,13 @@
                         justify-content: space-between;
                         margin-top: 5px;
                         font-size: 15px;
+                        
                         .topping
                         {
                             margin: 0;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
                         }
                         .price
                         {
