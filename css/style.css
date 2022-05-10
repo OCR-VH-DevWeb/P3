@@ -66,6 +66,36 @@
   }
 }
 
+/*apparition progressive des plats*/
+@-webkit-keyframes progress {
+  0% {
+    opacity: 0.1;
+    color: #ffffff;
+  }
+  50% {
+    opacity: 0.5;
+    color: #ffffff;
+  }
+  100% {
+    opacity: 1;
+    color: #ffffff;
+  }
+}
+@keyframes progress {
+  0% {
+    opacity: 0.1;
+    color: #ffffff;
+  }
+  50% {
+    opacity: 0.5;
+    color: #ffffff;
+  }
+  100% {
+    opacity: 1;
+    color: #ffffff;
+  }
+}
+
 /*@import "./utils/mixins";
 @import "./utils/extensions";
 
@@ -351,11 +381,11 @@ body, html {
 }
 
 .confirm {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 72px;
   background-color: #99E2D0;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,6 +396,15 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: -36px -20px 0 0;
+  font-size: 23px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 1px solid #99E2D0;
+}
+
+.confirm .check {
+  color: #ffffff;
 }
 
 .header {
@@ -824,7 +863,7 @@ body, html {
 }
 
 .menu-content__content .topic {
-  margin-bottom: 45px;
+  margin: 20px 0 50px 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -841,37 +880,60 @@ body, html {
 }
 
 .menu-content__content .topic .border {
-  margin-top: -8px;
+  margin: 5px 0 15px 0;
 }
 
 .menu-content__content .topic .choices {
   list-style: none;
   padding: 0;
-  -webkit-animation: fade;
-          animation: fade;
+  -webkit-transition: progress 4s linear;
+  transition: progress 4s linear;
 }
 
 .menu-content__content .topic .choices .detail {
   height: 70px;
+  width: 100%;
   background-color: #ffffff;
   border-radius: 15px;
   margin-bottom: 15px;
   padding: 15px 20px 10px 10px;
   -webkit-box-shadow: 0 0 20px lightgrey;
           box-shadow: 0 0 20px lightgrey;
-  overflow: t;
-  /*@media screen and (min-width:map-get($breakpoints, desktop))
-                    {
-                        height: 80px;
-                    }*/
+  overflow: hidden;
+  /*mise en place de confirm*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /**/
+  cursor: pointer;
 }
 
-.menu-content__content .topic .choices .detail .first {
+.menu-content__content .topic .choices .detail .detail:nth-last-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.menu-content__content .topic .choices .detail .detail:nth-last-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.menu-content__content .topic .choices .detail .detail:nth-last-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.menu-content__content .topic .choices .first {
   margin: 0%;
   font-size: 18px;
 }
 
-.menu-content__content .topic .choices .detail .second {
+.menu-content__content .topic .choices .second {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -880,19 +942,33 @@ body, html {
           justify-content: space-between;
   margin-top: 5px;
   font-size: 15px;
+  width: 80%;
 }
 
-.menu-content__content .topic .choices .detail .second .topping {
+.menu-content__content .topic .choices .second .topping {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.menu-content__content .topic .choices .detail .second .price {
+.menu-content__content .topic .choices .second .price {
   margin: 0;
-  /*shades dark sur price*/
   font-weight: 800;
+}
+
+.menu-content__content .topic .choices .confirm {
+  /*margin-right: -20px;
+                        margin-top: -36px;*/
+  font-size: 23px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 1px solid #99E2D0;
+  /*transition: margin, 2s;*/
+  /*.confirm:hover
+                        {
+                            transition: margin, 2s;
+                        }*/
 }
 
 .menu-content .button {

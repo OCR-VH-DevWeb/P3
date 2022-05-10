@@ -87,7 +87,7 @@
         }
         .topic
         {
-            margin-bottom: 45px;
+            margin: 20px 0 50px 0;
             @media screen and (min-width:map-get($breakpoints, desktop))
             {
                 width: 32%;
@@ -101,26 +101,41 @@
             }
             .border
             {
-                margin-top: -8px;
+                margin: 5px 0 15px 0;
             }
             .choices
             {
                 list-style: none; 
                 padding: 0;
-                animation: fade;
+                transition: progress 4s linear;
+                
                 .detail
                 {
                     height: 70px;
+                    width: 100%;
                     background-color: $color_white;
                     border-radius: 15px;
                     margin-bottom: 15px;
                     padding: 15px 20px 10px 10px;
                     box-shadow: 0 0 20px lightgrey;
-                    overflow: t;
-                    /*@media screen and (min-width:map-get($breakpoints, desktop))
+                    overflow: hidden; /*mise en place de confirm*/
+                    display: flex;
+                    flex-flow: wrap;
+                    justify-content: space-between;/**/
+                    cursor: pointer;
+                    .detail:nth-last-child(1)
                     {
-                        height: 80px;
-                    }*/
+                    animation-delay: 0.1s;
+                    }
+                    .detail:nth-last-child(2)
+                    {
+                    animation-delay: 0.2s;
+                    }
+                    .detail:nth-last-child(3)
+                    {
+                    animation-delay: 0.3s;
+                    }                    
+                }
                     .first
                     {
                         margin: 0%;
@@ -132,7 +147,7 @@
                         justify-content: space-between;
                         margin-top: 5px;
                         font-size: 15px;
-                        
+                        width: 80%;
                         .topping
                         {
                             margin: 0;
@@ -142,14 +157,27 @@
                         }
                         .price
                         {
-                            margin: 0;/*shades dark sur price*/
+                            margin: 0;
                             font-weight: 800;
                         }
+                    }
+                    .confirm/*essaie*/
+                    {
+                        /*margin-right: -20px;
+                        margin-top: -36px;*/
+                        font-size: 23px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        border: 1px solid #99E2D0;
+                        /*transition: margin, 2s;*/
+                        /*.confirm:hover
+                        {
+                            transition: margin, 2s;
+                        }*/
                     }
                 }
             }
         }
-    }
     .button
     {
         margin: 5px 32px 20px 32px;

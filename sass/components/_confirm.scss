@@ -1,12 +1,21 @@
 .confirm
 {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 72px;
   background-color: #99E2D0;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: -36px -20px 0 0;
+  font-size: 23px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 1px solid #99E2D0;
+  .check
+  {
+    color: $color_white;
+  }
 }
