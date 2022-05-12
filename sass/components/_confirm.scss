@@ -9,13 +9,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -36px -20px 0 0;
+  margin: -36px -250px 0 0;
   font-size: 23px;
-  text-overflow: ellipsis;
+  /*text-overflow: ellipsis;*/
   overflow: hidden;
   border: 1px solid #99E2D0;
-  .check
+  transition: margin 0.5s;
+    .check
   {
     color: $color_white;
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+    transition-delay: 0.2s;
+    
   }
 }

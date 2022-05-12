@@ -9,10 +9,15 @@
     padding: 0;
 }
 /*Fonts*/
-html, body 
+body > :not(.container-loader) 
 {
    font-family: 'Roboto', sans-serif, 'Shrikhand', cursive;
    min-width: 375px;
    max-width: 1400px;
+   margin: auto;
+    .container-loader
+    {
+        width: 100%;
+    }
 }
 

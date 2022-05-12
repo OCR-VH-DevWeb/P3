@@ -8,13 +8,12 @@
   }
 
 @keyframes loader{
-  0%{opacity: 0.9; z-index: 1;}
-  100%{opacity: 0; z-index: -1;}
+  0%{opacity: 0.9;}
+  100%{opacity: 0; z-index: 0;}
 }
 
 /*apparition progressive des plats*/
 @keyframes progress{
-  0%{opacity: 0.1; color: $color_white;}
-  50%{opacity: 0.5; color: $color_white;}
-  100%{opacity: 1; color: $color_white;}
+  0%{opacity: 0.1; }
+  100%{opacity: 1; }
 }
