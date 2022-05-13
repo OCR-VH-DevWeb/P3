@@ -388,13 +388,13 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: -36px -250px 0 0;
+  margin: -36px -100px 0 0;
   font-size: 23px;
   /*text-overflow: ellipsis;*/
   overflow: hidden;
   border: 1px solid #99E2D0;
-  -webkit-transition: margin 0.5s;
-  transition: margin 0.5s;
+  -webkit-transition: margin 0.5s ease-out;
+  transition: margin 0.5s ease-out;
 }
 
 .confirm .check {
@@ -933,10 +933,12 @@ body, html {
           justify-content: space-between;
   /**/
   cursor: pointer;
-  /*.detail:nth-last-child(4)
-                    {
-                    animation-delay: 1.1s;
-                    }    */
+}
+
+.menu-content__content .topic .choices .detail:hover .second {
+  width: 85%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
 .menu-content__content .topic .choices .detail:hover .confirm {
@@ -948,15 +950,12 @@ body, html {
           transform: rotate(360deg);
 }
 
-.menu-content__content .topic .choices .detail:hover .second {
-  width: 85%;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-}
-
 .menu-content__content .topic .choices .first {
   margin: 0%;
+  width: 100%;
   font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu-content__content .topic .choices .second {
@@ -969,6 +968,8 @@ body, html {
   margin-top: 5px;
   font-size: 15px;
   width: 100%;
+  -webkit-transition: width 0.9s;
+  transition: width 0.9s;
 }
 
 .menu-content__content .topic .choices .second .topping {
@@ -984,13 +985,10 @@ body, html {
 }
 
 .menu-content__content .topic .choices .confirm {
-  /*margin-right: -20px;
-                        margin-top: -36px;*/
   font-size: 23px;
   text-overflow: ellipsis;
   overflow: hidden;
   border: 1px solid #99E2D0;
-  overflow: hidden;
   /*transition: margin, 2s;*/
   /*.confirm:hover
                         {

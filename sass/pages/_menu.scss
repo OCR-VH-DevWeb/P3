@@ -136,33 +136,28 @@
                     display: flex;
                     flex-flow: wrap;
                     justify-content: space-between;/**/
-                    
                     cursor: pointer;
-                    &:hover .confirm
-                    {
-                        margin-right: -20px;
-                    }
-
-
-                    &:hover .confirm .check
-                    {
-                        transform: rotate(360deg);
-                    }
                     &:hover .second
                     {
                         width: 85%;
                         transition: width 0.5s;
                     }
-                     
-                    /*.detail:nth-last-child(4)
+                    &:hover .confirm
                     {
-                    animation-delay: 1.1s;
-                    }    */                           
+                        margin-right: -20px;
+                    }
+                    &:hover .confirm .check
+                    {
+                        transform: rotate(360deg);
+                    }
                 }
                     .first
                     {
                         margin: 0%;
+                        width: 100%;
                         font-size: 18px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                     .second
                     {
@@ -171,6 +166,7 @@
                         margin-top: 5px;
                         font-size: 15px;
                         width: 100%;
+                        transition: width 0.9s;
                         .topping
                         {
                             margin: 0;
@@ -186,13 +182,10 @@
                     }
                     .confirm/*essaie*/
                     {
-                        /*margin-right: -20px;
-                        margin-top: -36px;*/
                         font-size: 23px;
                         text-overflow: ellipsis;
                         overflow: hidden;
                         border: 1px solid #99E2D0;
-                        overflow: hidden;
 
                        
                         /*transition: margin, 2s;*/
