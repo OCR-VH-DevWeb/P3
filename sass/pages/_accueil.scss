@@ -3,7 +3,8 @@
     font-family: 'Shrikhand';
     font-size: 50px;
     background: linear-gradient(to right, #9356DC 0%, #FF79DA 50%, #99E2D0 100%);
-	-webkit-background-clip: text;
+    background-clip: text;
+	
 	-webkit-text-fill-color: transparent;
     position: relative;
     top: -70px;
