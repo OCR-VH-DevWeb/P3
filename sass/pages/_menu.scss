@@ -186,13 +186,6 @@
                         text-overflow: ellipsis;
                         overflow: hidden;
                         border: 1px solid #99E2D0;
-
-                       
-                        /*transition: margin, 2s;*/
-                        /*.confirm:hover
-                        {
-                            transition: margin, 2s;
-                        }*/
                     }
                 }
             }
@@ -202,47 +195,3 @@
         margin: 5px 32px 20px 32px;
     }
 }
-
-/*.menu-content
-{*/
-        /*@media screen and (min-width: map-get($breakpoints, inter))
-        {
-            justify-content: center;    
-        }
-    }
-        
-        choices
-            detail
-                width: 355px;
-                border: 1px solid $color_white;
-
-                
-                .first
-                {
-                    
-                    font-weight: 800;
-                    margin: 0 0 5px 0;  
-                }
-                .second
-                {
-                    .topping
-                    {
-                        font-size: 15px;
-                        font-weight: 400;
-                        margin: 0;
-                    }
-                    .price
-                    {
-                        font-weight: 800;
-                        font-size: 16px;
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    .button
-    {
-        width: 190px;
-        margin: 25px 30px 40px 30px;
-    }
-}*/
